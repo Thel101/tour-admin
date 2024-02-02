@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-row>
+        <v-col class="col-md-3">
+          <SideNavigation></SideNavigation>
+        </v-col>
+        <v-col class="col-md-9">
+          <router-view/>
+        </v-col>
+      </v-row>
+     
+      
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+import SideNavigation from './components/SideNavigation.vue';
+export default {
+  name: 'App',
+  components:{
+    SideNavigation
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>
