@@ -28,31 +28,31 @@ import { RouterLink } from 'vue-router';
                     <v-list-item-icon>
                         <v-icon>mdi-page-layout-sidebar-right</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Pages</v-list-item-title>
+                    <RouterLink class="text-decoration-none black--text" :to="{name: 'page'}"><v-list-item-title>Pages</v-list-item-title></RouterLink>
                 </v-list-item>
                 <v-list-item link>
                     <v-list-item-icon>
                         <v-icon>mdi-map-marker</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Destinations</v-list-item-title>
+                    <RouterLink class="text-decoration-none black--text" :to="{name: 'destinations'}"><v-list-item-title>Destinations</v-list-item-title></RouterLink>
                 </v-list-item>
                 <v-list-item link>
                     <v-list-item-icon>
                         <v-icon>mdi-form-select</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Requests</v-list-item-title>
+                    <RouterLink class="text-decoration-none black--text" :to="{name: 'inqury'}"><v-list-item-title>Requests</v-list-item-title></RouterLink>
                 </v-list-item>
                 <v-list-item link>
                     <v-list-item-icon>
                         <v-icon>mdi-plane-car</v-icon>
                     </v-list-item-icon>
-                   <RouterLink :to="{name: 'inqury'}">Plans</RouterLink>
+                   <RouterLink class="text-decoration-none black--text" :to="{name: 'plans'}"><v-list-item-title>Plans</v-list-item-title></RouterLink>
                 </v-list-item>
                 <v-list-item link>
                     <v-list-item-icon>
                         <v-icon>mdi-account-plus</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Create User</v-list-item-title>
+                    <RouterLink class="text-decoration-none black--text" :to="{name: 'users'}"><v-list-item-title>Create Users</v-list-item-title></RouterLink>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>

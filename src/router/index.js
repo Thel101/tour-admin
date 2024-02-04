@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import PageView from '@/views/PageView.vue'
 import AboutView from '@/views/AboutView.vue'
 import InquiryView from '@/views/InquiryView.vue'
+import Destination from '@/views/Destinations.vue'
+import PlanView from '@/views/PlanView.vue'
+import CreateUser from '@/views/CreateUser.vue'
 
 Vue.use(VueRouter)
 
@@ -21,7 +24,22 @@ const routes = [
     path : '/inqury',
     name: 'inqury',
     component: InquiryView
-  }
+  },
+  {
+    path : '/destinations',
+    name: 'destinations',
+    component: Destination
+  },
+  {
+    path : '/plans',
+    name: 'plans',
+    component: PlanView
+  },
+  {
+    path : '/users',
+    name: 'users',
+    component: CreateUser
+  },
   
 ]
 

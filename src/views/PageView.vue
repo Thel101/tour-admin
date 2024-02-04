@@ -6,7 +6,7 @@
         <v-form class="ma-10">
           <v-row class="fill-height" align="center">
             <v-col col="12" md="4" sm="4">
-              <v-subheader class="headling black--text font-weight-bold">Choose main page</v-subheader>
+              <v-subheader class="black--text font-weight-bold">Choose main page</v-subheader>
             </v-col>
             <v-col col="12" md="4" sm="4">
               <v-select :items="items" label="Choose Page Level" solo></v-select>
@@ -15,7 +15,7 @@
           </v-row>
           <v-row class="fill-height" align="center">
             <v-col col="12" md="4" sm="4">
-              <v-subheader class="headling black--text font-weight-bold">Choose component level</v-subheader>
+              <v-subheader class="black--text font-weight-bold">Choose component level</v-subheader>
             </v-col>
             <v-col col="12" md="4" sm="4">
               <v-select :items="contents" label="Choose Contnet Slots" solo></v-select>
