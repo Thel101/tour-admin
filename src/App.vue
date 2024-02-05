@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import SideNavigation from './components/SideNavigation.vue';
 export default {
   name: 'App',
