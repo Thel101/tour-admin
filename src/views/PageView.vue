@@ -37,7 +37,7 @@
               <v-subheader class="headling black--text font-weight-bold">Select background</v-subheader>
             </v-col>
             <v-col col="12" md="8" sm="8">
-              <v-file-input accept="image/*" label="country image"></v-file-input>
+              <v-file-input v-model="background" accept="image/*" label="country image"></v-file-input>
             </v-col>
             <v-col col="12">
 
@@ -75,7 +75,7 @@ export default {
       page_name: '',
       content_slots: '',
       status: 'active',
-      background: 'image1.jpeg',
+      background: null,
       title: '',
       description: ''
 
@@ -83,14 +83,18 @@ export default {
   },
   methods: {
     addContent() {
-      axios.post('http://tourism-app-backend.test/api/contents', {
+      axios.post('http://tourism-app-backend.test/api/contents/create', {
         page_name: this.page_name,
         content_slots: this.content_slots,
         status: this.status,
         background: this.background,
         title: this.title,
         description: this.description
-      }).then(function(response){
+      },
+      {headers:{
+        'Content-Type' : 'multipart/form-data'
+      }}
+      ).then(function(response){
         console.log(response)
       }).catch(function(error){
         console.log(error);

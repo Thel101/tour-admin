@@ -32,6 +32,12 @@ import { RouterLink } from 'vue-router';
                 </v-list-item>
                 <v-list-item link>
                     <v-list-item-icon>
+                        <v-icon>mdi-page-layout-sidebar-right</v-icon>
+                    </v-list-item-icon>
+                    <RouterLink class="text-decoration-none black--text" :to="{name: 'pages'}"><v-list-item-title>Pages</v-list-item-title></RouterLink>
+                </v-list-item>
+                <v-list-item link>
+                    <v-list-item-icon>
                         <v-icon>mdi-map-marker</v-icon>
                     </v-list-item-icon>
                     <RouterLink class="text-decoration-none black--text" :to="{name: 'destinations'}"><v-list-item-title>Destinations</v-list-item-title></RouterLink>
